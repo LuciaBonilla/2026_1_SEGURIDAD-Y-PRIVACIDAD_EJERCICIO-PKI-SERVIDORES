@@ -1,0 +1,11 @@
+services:
+  nginx-mtls:
+    image: nginx:latest
+    container_name: practico
+    ports:
+      - "443:443"
+    volumes:
+      - ./certs/server:/etc/nginx/ssl/server:ro
+      - ./certs/ca:/etc/nginx/ssl/ca:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./html/index.html:/usr/share/nginx/html/index.html:ro

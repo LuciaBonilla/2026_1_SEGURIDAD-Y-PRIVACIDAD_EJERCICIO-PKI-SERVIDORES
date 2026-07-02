@@ -1,0 +1,1 @@
+mkdir -p /etc/nginx/ssl/server /etc/nginx/ssl/ca /etc/nginx/ssl/client
